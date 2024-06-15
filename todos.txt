@@ -1,0 +1,2 @@
+1. create the login functionality. 
+2. create the dashboard and show the required info there. 
