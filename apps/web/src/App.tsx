@@ -7,7 +7,7 @@ const App = () => {
 	return (
 		<AuthWrapperHoc>
 			<Routes>
-				<Route path="/signin" element={<SignIn />} />
+				{/* <Route path="/signin" element={<SignIn />} /> */}
 				<Route path="/" element={<SignIn />} />
 				<Route path="/dashboard/*" element={<Dashboard />} />
 

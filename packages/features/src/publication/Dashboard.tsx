@@ -106,10 +106,7 @@ const Dashboard = () => {
 										<ul role="list" className="-mx-2 space-y-1">
 											<li>
 												{/* <!-- Current: "bg-indigo-700 text-white", Default: "text-indigo-200 hover:text-white hover:bg-indigo-700" --> */}
-												<a
-													href="#"
-													className="group flex gap-x-3 rounded-md bg-indigo-600 p-2 text-sm font-semibold leading-6 text-white"
-												>
+												<div className="group flex gap-x-3 rounded-md bg-indigo-600 p-2 text-sm font-semibold leading-6 text-white">
 													<svg
 														className="h-6 w-6 shrink-0 text-white"
 														fill="none"
@@ -125,7 +122,7 @@ const Dashboard = () => {
 														/>
 													</svg>
 													Dashboard
-												</a>
+												</div>
 											</li>
 											{dashboardItems.map((value: any) => {
 												return (
@@ -158,10 +155,7 @@ const Dashboard = () => {
 									</li>
 
 									<li className="mt-auto">
-										<a
-											href="#"
-											className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
-										>
+										<div className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white">
 											<svg
 												className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
 												fill="none"
@@ -182,7 +176,7 @@ const Dashboard = () => {
 												/>
 											</svg>
 											Settings
-										</a>
+										</div>
 									</li>
 								</ul>
 							</nav>
@@ -257,10 +251,7 @@ const Dashboard = () => {
 							</li>
 
 							<li className="mt-auto">
-								<a
-									href="#"
-									className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
-								>
+								<div className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white">
 									<svg
 										className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
 										fill="none"
@@ -281,7 +272,7 @@ const Dashboard = () => {
 										/>
 									</svg>
 									Settings
-								</a>
+								</div>
 							</li>
 						</ul>
 					</nav>
@@ -318,7 +309,7 @@ const Dashboard = () => {
 					></div>
 
 					<div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
-						<form className="relative flex flex-1" action="#" method="GET">
+						<div className="relative flex flex-1">
 							<label className="sr-only">Search</label>
 							<svg
 								className="pointer-events-none absolute inset-y-0 left-0 h-full w-5 text-gray-400"
@@ -339,7 +330,7 @@ const Dashboard = () => {
 								type="search"
 								name="search"
 							/>
-						</form>
+						</div>
 						<div className="flex items-center gap-x-4 lg:gap-x-6">
 							<button
 								type="button"

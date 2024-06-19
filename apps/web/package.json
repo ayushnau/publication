@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 5173 --host",
+    "start": "vite --port 5173 --host",
     "build": "tsc && vite build",
     "build:staging": "tsc && vite build --mode staging",
     "build:production": "tsc && vite build --mode production",

@@ -35,7 +35,6 @@ export default function Signin() {
 		return true;
 	};
 	const handleLogin = async () => {
-		console.log("working");
 		if (handleLoginValidate()) {
 			const response: any = await login(form.value);
 			console.log({ response });
@@ -47,8 +46,8 @@ export default function Signin() {
 	};
 
 	const handleSignin = async () => {
-		console.log("working");
 		if (handleValidate()) {
+			console.log(form.value, ">>chec here");
 			const response: any = await register(form.value);
 			console.log({ response });
 			if (response.success) {
@@ -78,7 +77,7 @@ export default function Signin() {
 					</div>
 
 					<div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-						<form className="space-y-6" action="#" method="POST">
+						<div className="space-y-6">
 							<div>
 								<label
 									htmlFor="name"
@@ -146,7 +145,7 @@ export default function Signin() {
 									type="submit"
 									className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 								>
-									Sign in
+									Signin
 								</button>
 							</div>
 							<div
@@ -155,7 +154,7 @@ export default function Signin() {
 							>
 								Already a member
 							</div>
-						</form>
+						</div>
 
 						{/* <div className="mt-10 text-end text-sm text-gray-500">
 					<div className="text-sm">
@@ -186,7 +185,7 @@ export default function Signin() {
 						</div>
 
 						<div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-							<form className="space-y-6" action="#" method="POST">
+							<div className="space-y-6">
 								<div>
 									<label
 										htmlFor="email"
@@ -237,7 +236,7 @@ export default function Signin() {
 										type="submit"
 										className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 									>
-										Login in
+										Login
 									</button>
 								</div>
 								<div
@@ -246,7 +245,7 @@ export default function Signin() {
 								>
 									Register
 								</div>
-							</form>
+							</div>
 
 							{/* <div className="mt-10 text-end text-sm text-gray-500">
 						<div className="text-sm">

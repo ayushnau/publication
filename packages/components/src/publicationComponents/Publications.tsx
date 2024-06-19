@@ -17,14 +17,10 @@ const Publications = () => {
 							</div>
 							<div className="min-w-0 flex-1">
 								<p className="text-sm font-semibold text-gray-900">
-									<a href="#" className="hover:underline">
-										{item.name}
-									</a>
+									<div className="hover:underline">{item.name}</div>
 								</p>
 								<p className="text-sm text-gray-500">
-									<a href="#" className="hover:underline">
-										December 9 at 11:43 AM
-									</a>
+									<div className="hover:underline">December 9 at 11:43 AM</div>
 								</p>
 							</div>
 							<div className="flex flex-shrink-0 self-center">

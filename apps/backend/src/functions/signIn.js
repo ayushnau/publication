@@ -11,6 +11,7 @@ module.exports = async (payload) => {
 		});
 		return result;
 	} catch (error) {
+		console.log({ error });
 		throw error;
 	}
 };

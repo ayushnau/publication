@@ -6,34 +6,34 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { BrowserRouter } from "react-router-dom";
 import { webStore, webPersistor } from "store";
-import * as Sentry from "@sentry/react";
+// import * as Sentry from "@sentry/react";
 
 console.log({ webStore, webPersistor });
-Sentry.init({
-	dsn: process.env.VITE_WEB_SENTRY_DSN,
-	environment: process.env.VITE_ENVIRONMENT,
-	beforeSend(event) {
-		if (event.environment === "development") return null;
-		return event;
-	},
-	integrations: [
-		new Sentry.Replay({
-			maskAllText: false,
-			blockAllMedia: false,
-		}),
-	],
-	tracesSampleRate: 1.0,
-	replaysSessionSampleRate: 0.1,
-	replaysOnErrorSampleRate: 1.0,
-});
+// Sentry.init({
+// 	dsn: process.env.VITE_WEB_SENTRY_DSN,
+// 	environment: process.env.VITE_ENVIRONMENT,
+// 	beforeSend(event) {
+// 		if (event.environment === "development") return null;
+// 		return event;
+// 	},
+// 	integrations: [
+// 		new Sentry.Replay({
+// 			maskAllText: false,
+// 			blockAllMedia: false,
+// 		}),
+// 	],
+// 	tracesSampleRate: 1.0,
+// 	replaysSessionSampleRate: 0.1,
+// 	replaysOnErrorSampleRate: 1.0,
+// });
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<BrowserRouter>
 		<Provider store={webStore}>
 			<PersistGate loading={null} persistor={webPersistor}>
 				<React.Suspense fallback="loading">
-					<Sentry.ErrorBoundary>
-						<App />
-					</Sentry.ErrorBoundary>
+					{/* <Sentry.ErrorBoundary> */}
+					<App />
+					{/* </Sentry.ErrorBoundary> */}
 				</React.Suspense>
 			</PersistGate>
 		</Provider>
